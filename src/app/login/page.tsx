@@ -1,4 +1,4 @@
-import { login, signup } from './actions'
+import { login } from './actions'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -39,9 +39,6 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
           <CardFooter className="flex flex-col gap-3 pb-8">
             <Button formAction={login} className="w-full bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/25 transition-all">
               Sign In
-            </Button>
-            <Button formAction={signup} variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 text-white transition-all">
-              Sign Up
             </Button>
           </CardFooter>
         </form>
