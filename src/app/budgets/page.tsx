@@ -6,8 +6,8 @@ import { createClient } from "@/utils/supabase/server";
 export default async function BudgetsPage() {
   const supabase = await createClient();
   
-  let budgets = [];
-  let transactions = [];
+  let budgets: any[] = [];
+  let transactions: any[] = [];
   
   try {
     const [budgetsData, txData] = await Promise.all([
