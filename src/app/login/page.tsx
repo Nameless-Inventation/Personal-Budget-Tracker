@@ -14,7 +14,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
       
       <Card className="w-[420px] border-white/10 bg-white/5 backdrop-blur-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-1000 z-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50 pointer-events-none" />
-        <form className="relative z-10">
+        <form action={login} className="relative z-10">
           <CardHeader className="space-y-1 text-center pb-6 pt-8">
             <CardTitle className="text-3xl font-bold tracking-tight text-white">Welcome</CardTitle>
             <CardDescription className="text-zinc-400">Enter your credentials to access the tracker</CardDescription>
@@ -37,7 +37,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
             )}
           </CardContent>
           <CardFooter className="flex flex-col gap-3 pb-8">
-            <Button formAction={login} className="w-full bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/25 transition-all">
+            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/25 transition-all">
               Sign In
             </Button>
           </CardFooter>
